@@ -3,6 +3,8 @@ from . import views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
+    # Home -> books list
+    path('', views.list_books, name='home'),
 
     # Books
     path('books/', views.list_books, name="list_books"),
