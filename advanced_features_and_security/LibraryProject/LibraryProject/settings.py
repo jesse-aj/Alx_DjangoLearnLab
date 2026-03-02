@@ -146,3 +146,7 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 
 # Enable browser XSS filter
 SECURE_BROWSER_XSS_FILTER = True
+
+
+# Tells Django to trust the X-Forwarded-Proto header from a proxy/load balancer
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
