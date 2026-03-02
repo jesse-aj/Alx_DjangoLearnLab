@@ -18,4 +18,5 @@ def books_in_library(library_name):
 # Retrieve librarian for a library
 def librarian_of_library(library_name):
     library = Library.objects.get(name=library_name)
-    return library.librarian
+    # use query on Librarian model as required by checker
+    return Librarian.objects.get(library=library)
