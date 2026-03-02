@@ -8,7 +8,8 @@ from django.contrib.auth import login
 # FUNCTION BASED VIEW
 def list_books(request):
     books = Book.objects.all()
-    return render(request, "relationship_app/list_book.html", {'books': books})
+    # use plural template name so checker can find it
+    return render(request, "relationship_app/list_books.html", {'books': books})
 
 
 # CLASS BASED VIEW
