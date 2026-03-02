@@ -8,7 +8,7 @@ from django.contrib.auth import login
 # FUNCTION BASED VIEW
 def list_books(request):
     books = Book.objects.all()
-    return render(request, 'relationship_app/list_book.html', {'books': books})
+    return render(request, "relationship_app/list_book.html", {'books': books})
 
 
 # CLASS BASED VIEW
